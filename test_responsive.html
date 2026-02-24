@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式测试 - Hululuistrue个人主页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        .device-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .device-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .device-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .device-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+        
+        .test-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 0.5rem;
+            transition: background 0.3s ease;
+        }
+        
+        .test-button:hover {
+            background: #764ba2;
+        }
+        
+        .test-results {
+            background: #e8f4f8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .result-item {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: white;
+            border-radius: 5px;
+        }
+        
+        .pass {
+            color: #28a745;
+        }
+        
+        .fail {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>📱 响应式设计测试</h1>
+        <p>测试Hululuistrue个人主页在不同设备上的显示效果</p>
+        
+        <div class="device-list">
+            <div class="device-card">
+                <div class="device-icon">📱</div>
+                <h3>手机</h3>
+                <p>≤ 480px</p>
+                <p>单列布局</p>
+            </div>
+            <div class="device-card">
+                <div class="device-icon">📱</div>
+                <h3>平板</h3>
+                <p>≤ 768px</p>
+                <p>自适应网格</p>
+            </div>
+            <div class="device-card">
+                <div class="device-icon">💻</div>
+                <h3>桌面</h3>
+                <p>> 768px</p>
+                <p>多列网格</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="index.html" class="test-button" target="_blank">🔗 打开个人主页</a>
+            <a href="https://hululuistrue.github.io" class="test-button" target="_blank">🌐 在线版本</a>
+        </div>
+        
+        <div class="test-results">
+            <h3>✅ 已修复的响应式问题：</h3>
+            <div class="result-item pass">1. 移动端卡片布局：单列显示</div>
+            <div class="result-item pass">2. 头像大小：移动端适当缩小</div>
+            <div class="result-item pass">3. 内边距：移动端减少内边距</div>
+            <div class="result-item pass">4. 字体大小：移动端适当缩小</div>
+            <div class="result-item pass">5. 联系方式：移动端垂直排列</div>
+            <div class="result-item pass">6. 随机提示：移动端调整位置和大小</div>
+            <div class="result-item pass">7. 容器宽度：移动端减少padding</div>
+            
+            <h3 style="margin-top: 2rem;">📱 测试方法：</h3>
+            <div class="result-item">
+                1. 在Chrome/Firefox中打开页面<br>
+                2. 按F12打开开发者工具<br>
+                3. 点击"切换设备工具栏"图标<br>
+                4. 选择不同设备尺寸测试<br>
+                5. 刷新页面查看效果
+            </div>
+            
+            <h3 style="margin-top: 2rem;">🎯 测试要点：</h3>
+            <div class="result-item">
+                • 480px以下：单列布局，紧凑显示<br>
+                • 480-768px：自适应网格，适当间距<br>
+                • 768px以上：完整网格布局<br>
+                • 所有尺寸：内容可读，无水平滚动
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;">
+            <p>💡 提示：在真实设备上测试效果最佳</p>
+            <p>📧 发现问题？联系：hululuistrue@github.com</p>
+        </div>
+    </div>
+    
+    <script>
+        // 自动检测当前设备
+        function detectDevice() {
+            const width = window.innerWidth;
+            let device = '';
+            
+            if (width <= 480) {
+                device = '📱 手机 (≤ 480px)';
+            } else if (width <= 768) {
+                device = '📱 平板 (≤ 768px)';
+            } else {
+                device = '💻 桌面 (> 768px)';
+            }
+            
+            // 显示当前设备
+            const deviceInfo = document.createElement('div');
+            deviceInfo.style.cssText = `
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                background: rgba(102, 126, 234, 0.9);
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 0.8rem;
+                z-index: 1000;
+            `;
+            deviceInfo.textContent = `当前: ${device} (${width}px)`;
+            document.body.appendChild(deviceInfo);
+            
+            // 监听窗口大小变化
+            window.addEventListener('resize', function() {
+                deviceInfo.textContent = `当前: ${detectDeviceType()} (${window.innerWidth}px)`;
+            });
+        }
+        
+        function detectDeviceType() {
+            const width = window.innerWidth;
+            if (width <= 480) return '📱 手机';
+            if (width <= 768) return '📱 平板';
+            return '💻 桌面';
+        }
+        
+        // 页面加载完成后显示设备信息
+        document.addEventListener('DOMContentLoaded', detectDevice);
+    </script>
+</body>
+</html>
