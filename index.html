@@ -194,6 +194,35 @@
                 font-size: 1.2rem;
             }
         }
+        
+        /* 幽默动画 */
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .avatar {
+            animation: bounce 2s infinite ease-in-out;
+        }
+        
+        .contact-link:hover {
+            animation: bounce 0.5s ease;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -201,7 +230,8 @@
     <div class="container">
         <header class="header">
             <h1>Hululuistrue</h1>
-            <p>技术探索者 · AI爱好者 · 量化交易开发者</p>
+            <p>专业debugger · 业余咖啡师 · 全职技术段子手</p>
+            <p style="font-size: 1.2rem; margin-top: 1rem; opacity: 0.8;">"如果代码能跑，就不要动它" - 我的座右铭</p>
         </header>
         
         <main class="main-content">
@@ -211,9 +241,10 @@
                 </div>
                 <div class="about-text">
                     <h2>关于我</h2>
-                    <p>你好！我是Hululuistrue，一名对技术和创新充满热情的技术爱好者。</p>
-                    <p>我专注于AI技术、量化交易系统开发和前沿科技探索。相信技术可以改变世界，创造更美好的未来。</p>
-                    <p>这个主页是我在GitHub上的个人空间，展示我的项目和想法。</p>
+                    <p>👋 你好！我是Hululuistrue，一个在代码和咖啡之间寻找平衡的技术爱好者。</p>
+                    <p>🤖 我的日常：早上和AI聊天，中午和量化策略吵架，晚上和bug约会。是的，我的社交生活很丰富。</p>
+                    <p>💡 我相信：如果代码能跑，就不要动它；如果bug能藏，就让它藏到下一个版本。</p>
+                    <p>🎯 人生目标：写出能让我提前退休的量化策略，或者至少写出能帮我点外卖的AI助手。</p>
                 </div>
             </section>
             
@@ -222,19 +253,19 @@
                 <div class="skills-grid">
                     <div class="skill-card">
                         <h3><i class="fas fa-brain"></i> AI & 机器学习</h3>
-                        <p>深度学习、自然语言处理、计算机视觉、生成式AI</p>
+                        <p>擅长让AI写诗、画画、聊天，偶尔也让它们写写代码（然后我来debug）</p>
                     </div>
                     <div class="skill-card">
                         <h3><i class="fas fa-chart-line"></i> 量化交易</h3>
-                        <p>策略开发、回测系统、风险管理、自动化交易</p>
+                        <p>专业亏钱20年经验，现在让AI帮我亏，效率更高了</p>
                     </div>
                     <div class="skill-card">
                         <h3><i class="fas fa-code"></i> 全栈开发</h3>
-                        <p>Python、JavaScript、FastAPI、React、Docker</p>
+                        <p>前端：会复制粘贴；后端：会Google搜索；部署：会点"Deploy"按钮</p>
                     </div>
                     <div class="skill-card">
                         <h3><i class="fas fa-server"></i> 云与部署</h3>
-                        <p>AWS、Docker、Kubernetes、CI/CD、监控系统</p>
+                        <p>精通"重启大法"，擅长"这在我本地是好的"经典甩锅</p>
                     </div>
                 </div>
             </section>
@@ -248,7 +279,7 @@
                         </div>
                         <div class="project-content">
                             <h3>AI量化交易系统</h3>
-                            <p>基于机器学习的量化交易平台，支持多种策略和实时监控。</p>
+                            <p>让AI帮我炒股，亏了算它的，赚了算我的，完美！</p>
                         </div>
                     </div>
                     <div class="project-card">
@@ -257,7 +288,7 @@
                         </div>
                         <div class="project-content">
                             <h3>Polymarket监控系统</h3>
-                            <p>区块链预测市场实时监控和警报系统。</p>
+                            <p>盯着别人赌未来，比看股票刺激多了，还不用真花钱。</p>
                         </div>
                     </div>
                     <div class="project-card">
@@ -266,7 +297,7 @@
                         </div>
                         <div class="project-content">
                             <h3>AI内容生成系统</h3>
-                            <p>自动化AI技术文章生成和社交媒体内容优化。</p>
+                            <p>让AI写文章，我负责喝茶，这才是真正的自动化。</p>
                         </div>
                     </div>
                 </div>
@@ -276,21 +307,22 @@
                 <h2>联系我</h2>
                 <div class="contact-links">
                     <a href="https://github.com/hululuistrue" class="contact-link" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
+                        <i class="fab fa-github"></i> GitHub (来看我的bug合集)
                     </a>
                     <a href="mailto:hululuistrue@github.com" class="contact-link">
-                        <i class="fas fa-envelope"></i> 邮箱
+                        <i class="fas fa-envelope"></i> 邮箱 (24/7，回复看心情)
                     </a>
                     <a href="#" class="contact-link">
-                        <i class="fas fa-blog"></i> 博客
+                        <i class="fas fa-blog"></i> 博客 (建设中，就像我的退休计划)
                     </a>
                 </div>
             </section>
         </main>
         
         <footer class="footer">
-            <p>© 2024 Hululuistrue. 由GitHub Pages托管。</p>
-            <p>最后更新: <span id="current-date"></span></p>
+            <p>© 2024 Hululuistrue. 由GitHub Pages托管，bug由我自己负责。</p>
+            <p>最后更新: <span id="current-date"></span> (如果我还记得的话)</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">免责声明：本页面的幽默感可能因咖啡摄入量而异</p>
         </footer>
     </div>
     
@@ -315,6 +347,73 @@
                     card.style.transform = 'translateY(0)';
                 }, 100 * index);
             });
+            
+            // 添加幽默的鼠标悬停效果
+            const skillCards = document.querySelectorAll('.skill-card');
+            skillCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const texts = this.querySelectorAll('p');
+                    texts.forEach(text => {
+                        const original = text.textContent;
+                        text.dataset.original = original;
+                        
+                        // 根据卡片类型显示幽默文本
+                        if (original.includes('debug')) {
+                            text.textContent = '其实就是会Google和Stack Overflow';
+                        } else if (original.includes('亏钱')) {
+                            text.textContent = '经验丰富，可以开班授课了';
+                        } else if (original.includes('复制粘贴')) {
+                            text.textContent = '程序员的核心技能，不要小看';
+                        } else if (original.includes('重启大法')) {
+                            text.textContent = '解决90%的问题，信我';
+                        }
+                    });
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const texts = this.querySelectorAll('p');
+                    texts.forEach(text => {
+                        if (text.dataset.original) {
+                            text.textContent = text.dataset.original;
+                        }
+                    });
+                });
+            });
+            
+            // 随机显示幽默提示
+            const tips = [
+                "💡 小贴士：多喝咖啡，bug会自己消失",
+                "🤔 思考：如果AI这么聪明，为什么还要我写代码？",
+                "🎯 目标：今天不写bug，只写feature",
+                "😅 现实：又到了debug到凌晨的美好时光",
+                "🚀 计划：先写个TODO，然后永远不完成"
+            ];
+            
+            const randomTip = tips[Math.floor(Math.random() * tips.length)];
+            const tipElement = document.createElement('div');
+            tipElement.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: rgba(102, 126, 234, 0.9);
+                color: white;
+                padding: 10px 15px;
+                border-radius: 10px;
+                font-size: 0.9rem;
+                max-width: 300px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                z-index: 1000;
+                animation: slideIn 0.5s ease;
+            `;
+            tipElement.textContent = randomTip;
+            document.body.appendChild(tipElement);
+            
+            // 5秒后消失
+            setTimeout(() => {
+                tipElement.style.opacity = '0';
+                tipElement.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => tipElement.remove(), 500);
+            }, 5000);
         });
     </script>
 </body>
