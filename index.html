@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hululuistrue的个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-top: -2rem;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        .section h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .about-me {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            font-weight: bold;
+        }
+        
+        .about-text p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .skill-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .project-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-content h3 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .contact-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-link:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .about-me {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Hululuistrue</h1>
+            <p>技术探索者 · AI爱好者 · 量化交易开发者</p>
+        </header>
+        
+        <main class="main-content">
+            <section class="section about-me">
+                <div class="avatar">
+                    H
+                </div>
+                <div class="about-text">
+                    <h2>关于我</h2>
+                    <p>你好！我是Hululuistrue，一名对技术和创新充满热情的技术爱好者。</p>
+                    <p>我专注于AI技术、量化交易系统开发和前沿科技探索。相信技术可以改变世界，创造更美好的未来。</p>
+                    <p>这个主页是我在GitHub上的个人空间，展示我的项目和想法。</p>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>技术栈</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3><i class="fas fa-brain"></i> AI & 机器学习</h3>
+                        <p>深度学习、自然语言处理、计算机视觉、生成式AI</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-chart-line"></i> 量化交易</h3>
+                        <p>策略开发、回测系统、风险管理、自动化交易</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-code"></i> 全栈开发</h3>
+                        <p>Python、JavaScript、FastAPI、React、Docker</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3><i class="fas fa-server"></i> 云与部署</h3>
+                        <p>AWS、Docker、Kubernetes、CI/CD、监控系统</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>精选项目</h2>
+                <div class="projects">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>AI量化交易系统</h3>
+                            <p>基于机器学习的量化交易平台，支持多种策略和实时监控。</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Polymarket监控系统</h3>
+                            <p>区块链预测市场实时监控和警报系统。</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>AI内容生成系统</h3>
+                            <p>自动化AI技术文章生成和社交媒体内容优化。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>联系我</h2>
+                <div class="contact-links">
+                    <a href="https://github.com/hululuistrue" class="contact-link" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="mailto:hululuistrue@github.com" class="contact-link">
+                        <i class="fas fa-envelope"></i> 邮箱
+                    </a>
+                    <a href="#" class="contact-link">
+                        <i class="fas fa-blog"></i> 博客
+                    </a>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <p>© 2024 Hululuistrue. 由GitHub Pages托管。</p>
+            <p>最后更新: <span id="current-date"></span></p>
+        </footer>
+    </div>
+    
+    <script>
+        // 显示当前日期
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('zh-CN', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        
+        // 简单的动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.skill-card, .project-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+</html>
